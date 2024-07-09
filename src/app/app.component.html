@@ -1,0 +1,41 @@
+<div class="container-fluid intro">
+  <div class="row flex-nowrap">
+    <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg">
+      <ng-http-loader></ng-http-loader>
+      <app-navbar></app-navbar>
+    </div>
+    <div class="col container mt-5 w-80" *ngIf="showBanner">
+      <div class="card gradient-custom-1 detail-card">
+        <div class="card-body">
+          <dl>
+            <dt>
+              <div class="text-center">
+                <h3 class="text-center">Welcome</h3>
+              </div>
+            </dt>
+            <p class="mb-3">Here we are implementing Quarkus with Angular framework.</p>
+            <h5>What is Quarkus?</h5>
+            <p>Quarkus was created to enable Java developers to create applications for a modern, cloud-native world.
+              Quarkus is a Kubernetes-native Java framework tailored for GraalVM and HotSpot, crafted from best-of-breed
+              Java libraries and standards. The goal is to make Java the leading platform in Kubernetes and serverless
+              environments while offering developers a framework to address a wider range of distributed application
+              architectures.</p><hr>
+            <h5>What is Angular?</h5>
+            <p>Angular is a development platform, built on TypeScript. As a platform, Angular includes:</p>
+            <ul>
+
+              <li>A component-based framework for building scalable web applications</li>
+              <li>A collection of well-integrated libraries that cover a wide variety of features, including routing,
+                forms management, client-server communication, and more</li>
+              <li>A suite of developer tools to help you develop, build, test, and update your code</li>
+            </ul>
+            
+          </dl>
+        </div>
+      </div>
+    </div>
+    <div class="col p-0" *ngIf="!showBanner">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
